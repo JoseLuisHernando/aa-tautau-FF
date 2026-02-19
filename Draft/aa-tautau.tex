@@ -1,0 +1,311 @@
+%% Main-Version Draft
+\documentclass[12pt,a4]{article}
+%% -------------------------------
+%% |          Packages           |
+%% -------------------------------
+ \usepackage{amsmath}
+ \usepackage{mathtools} 
+ \usepackage{graphicx}
+ \usepackage[merge,numbers,compress]{natbib}
+ \usepackage[T1]{fontenc}
+ \usepackage{booktabs}
+ \usepackage{xcolor} 
+ \usepackage{xspace}
+ \usepackage{dcolumn}
+ \usepackage{placeins}
+ \usepackage[colorlinks=true,citecolor=blue!50!black,linkcolor=black]{hyperref}
+%  \usepackage[pdfborder={0 0 0}]{hyperref}
+ \usepackage{caption}
+ \usepackage
+ [subrefformat=parens,position=top,skip=-15pt,margin=15pt,justification=justified,singlelinecheck=false]
+ {subcaption}
+ \usepackage{multirow}
+\usepackage{slashed}
+\usepackage[bottom]{footmisc}
+\usepackage{comment}
+\usepackage{bigints}
+\usepackage{hhline}
+\usepackage[normalem]{ulem}
+
+%\oddsidemargin 00pt \evensidemargin 00pt
+%\topmargin 00pt \headheight 00pt \headsep 00pt
+%%\footheight 12pt \footskip 30pt
+%\textheight 232mm \textwidth 160mm
+
+\setlength{\evensidemargin}{00pt}
+\setlength{\oddsidemargin}{00pt}
+\setlength{\topmargin}{0.00pt}
+\setlength{\textwidth}{160mm}
+\setlength{\textheight}{232mm}
+\setlength{\headheight}{00pt}
+\setlength{\headsep}{00pt}
+\setlength{\voffset}{00pt}
+\setlength{\hoffset}{00pt}
+%\setlength{\paperheight}{29.7cm}
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.8}
+
+\newcommand{\SD}[1]{{ {\color{orange}{ [SD: #1]}} }}
+\newcommand{\MP}[1]{{ {\color{blue}{ [MP: #1]}} }}
+\newcommand{\JH}[1]{{ {\color{violet}{ [JH: #1]}} }}
+%\newcommand{\change}[1]{{{\color{red}{#1}}}}
+\newcommand{\new}[1]{{{\color{olive}{#1}}}}
+
+\newcommand{\processmue}{\gamma\gamma \to \tau^+ \tau^- \to e^+ \mu^- \bar{\nu}_\tau \nu_\tau \bar{\nu}_{\mu} \nu_{e}}
+
+\newcommand{\process}{\gamma\gamma \to \tau^+ \tau^- \to \ell'^+ \ell^- \bar{\nu}_\tau \nu_\tau \bar{\nu}_{\ell} \nu_{\ell'}}
+
+\newcommand{\M}{\mathcal{M}}
+
+%% ---------------------------------
+%% | ToDo Marker - only for draft! |
+%% ---------------------------------
+% Remove this section for final version!
+% \setlength{\marginparwidth}{20mm}
+% 
+% \newcommand{\margtodo}
+% {\marginpar{\textbf{\textcolor{red}{ToDo}}}{}}
+% 
+% \newcommand{\todo}[1]
+% {{\textbf{\textcolor{red}{(\margtodo{}#1)}}}{}}
+
+\newcommand{\eq}[1]{\begin{equation} #1 \end{equation}}
+\newcommand{\eqa}[1]{\begin{eqnarray} #1 \end{eqnarray}}
+
+\input{macros}
+
+\begin{document}
+
+\title{\hfill ~\\[-30mm]
+\phantom{h} \hfill\mbox{\small FR-PHENO-2026-XXX}
+\\[1cm]
+\vspace{13mm} 
+%\textbf{Subtleties in the determination of the anomalous magnetic moment and the electric dipole moment of leptons via ultraperipheral heavy-ion collisions at the LHC.}
+\textbf{Imprint of the anomalous magnetic moment 
+%and the electric dipole moment 
+of the $\tau$-lepton in the $\tau^+\tau^-$ production via ultraperipheral heavy-ion collisions at the LHC.}
+}
+
+\date{}
+\author{
+Stefan Dittmaier\footnote{E-mail:
+  \texttt{stefan.dittmaier@physik.uni-freiburg.de}},
+José Luis Hernando Ariza\footnote{E-mail: 
+  \texttt{jose.luis.hernando@physik.uni-freiburg.de}},
+Mathieu Pellen\footnote{E-mail:
+  \texttt{mathieu.pellen@physik.uni-freiburg.de}}
+\\[9mm]
+{\small\it Universit\"at Freiburg, Physikalisches Institut,} \\
+{\small\it Hermann-Herder-Str.\ 3, 79104 Freiburg, Germany}\\[3mm]
+}
+\maketitle
+
+\begin{abstract}
+\noindent
+
+
+\end{abstract}
+\thispagestyle{empty}
+
+
+\newpage
+\setcounter{page}{1}
+
+\tableofcontents
+% \newpage
+
+\section{Introduction}
+
+
+\section{Features of the calculation}
+\label{sec:features}
+
+
+\subsection{Form-factor approach}
+\label{sec:form_factor}
+
+- Keep this section for a general lepton and focus on the $\tau$-lepton in the numerics to emphasize that the same analysis can be done for $e$ and $\mu$ as a check of the method(?).
+
+\subsubsection{Form-factor decomposition of the $\bf{\gamma}\bf{\bar{\tau}}\bf{\tau}$ vertex function}
+\label{sec:vertex}
+
+- Mention the problem of the off-shell $\tau$ in the standard approach.
+
+- Outline the way how the general form-factor decomposition is obtained.
+
+- Give the general form-factor decomposition in the on-shell basis.
+
+- Give the transformation properties under space-time discrete symmetries of each term (no details). 
+
+- Give the from-factor decomposition in the standard kinetical configuration and in ``ours''.
+
+- Remark that the decomposition is gauge dependent (Ward identities).
+
+\subsubsection{Extracting the contribution from $a_\tau$}
+\label{sec:a_tau_term}
+
+- Write matrix element with the general vertex decomposition.
+
+- Perform an expansion of the form factors in $\alpha$.
+
+- Remark again the presence of gauge dependence in this decomposition.
+
+- Remark the absence of effects due to real radiation in the form factor approach.
+
+- Perform Taylor expansion of the form factors around $\frac{x}{s} \sim \frac{m^2}{s}$ ($x=t,u$) to extract $a_\tau$ and $d_\tau$ contributions.
+
+\subsubsection{Coulomb term and Sommerfeld enhancement}
+\label{sec:Coulomb_term}
+
+- Explain the need of including the Coulomb term.
+
+- Give the contribution from Coulomb term.
+
+\subsubsection{Analytical expressions for the helicity amplitudes (?)}
+\label{sec:analytics}
+
+- Give analytical expression in the spinor-helicity formalism for $\M^{(0)}$, $\M^{a_\tau}$, $\M^{d_\tau}$.
+
+\subsection{Technical aspects of the calculation and employed tools}
+\label{sec:tools}
+
+- Use of equivalent-photon approximation.
+
+- Use of iNWA to include spin correlations.
+
+- Use of mixed input-parameter scheme.
+
+
+\subsubsection*{Checks on the calculation}
+\label{sec:checks}
+
+- Analytical expressions checked against FeynArts.
+
+- Correct behaviour under $\mc{P}$, $\mc{C}$ and $\mc{CP}$ of $\M^{(0)}$, $\M^{a_\tau}$, $\M^{d_\tau}$  (?).
+
+\subsection{Set-up of the calculation}
+\label{sec:setup}
+
+\subsubsection*{Numerical input}
+\label{sec:inputs}
+
+- Numerical inputs
+
+\subsubsection*{Event selection}
+\label{sec:selection}
+
+- ATLAS set-up
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Comparison between the form-factor and the fixed-order calculation}
+
+- Reference to the previous paper for details on the NLO prediction.
+
+- Show the relevance of the non included effects in the form-factor approach, \ie
+\begin{align}
+  \Delta_\mr{FF}
+  = \frac{\sigma^{\mr{FF}} - \sigma^{\mr{QED}_\mr{P}}}{\sigma^{\mr{QED}_\mr{P}}}
+\end{align}
+
+\subsubsection{Inclusive $\tau$-pair production}
+\label{sec:aa_to_tautau}
+
+- Comparison just for the production, \ie no $\tau$-decays.
+
+- Show it just for unpolarized $\tau$-leptons.
+
+- Mention that $a_\tau$ is part of QED corrections, which are gauge invariant independently and, thus, they can be compared.
+
+
+\subsubsection*{Fixed photon--photon centre-of-mass energy}
+
+- Show comparison for fixed c.m.e. ($3.8, 5(?), 10, 18 \GeV$? or all?)
+
+- Remark importance of the Coulomb term for small c.m.e..
+
+- Remark the importance of using observables that are not sensitive to collinear radiation off the produced $\tau$-leptons.
+
+
+\subsubsection*{Ultraperipheral heavy-ion collision}
+
+- Show comparison with photon flux.
+
+- Mention the problem in Ref.~\cite{Jiang:2024dhf}: 
+
+ * Wrong input-parameter scheme $\to$ Fixable by considering the cross section, not just the correction. 
+
+ * They do not include the Coulomb term $\to$ Wrong value for $a_\tau$ obtained. 
+
+
+\subsubsection{$\tau$-pair production with leptonic $\tau$-decays}
+
+- Comparison including leptonic $\tau$-decays.
+
+- Show the comparison between $\sigma^\mr{QED}_\mr{P}$ vs $\sigma^{\mr{FF}}$.
+
+- Show the comparison between $\sigma^\mr{NLO}$ vs $\sigma^{\mr{FF}} + \Delta\sigma^\NLO_\mr{D} + \Delta\sigma^\NLO_{\overline{\mr{D}}}$.
+
+- Remark the importance of including the corrections to the decays in the form-factor calculation (or of extracting these corrections to the fixed-order calculation).
+Specially if $p_{\mr{T},\mu}$ is employed in the analysis.  
+
+\subsubsection*{Fixed photon--photon centre-of-mass energy (?)}
+
+- Show inclusive predictions for fixed c.m.e.
+
+- Remark again the dominance of the Coulomb term in the NLO correction for small c.m.e. 
+
+- Show that the sensitivity of $p_{\mr{T},\mu}$ to collinear radiation off the produced $\tau$-leptons is not determinant and, thus, it is a good observable.
+
+
+\subsubsection*{ATLAS set-up}
+
+- Show the comparison for the ATLAS set-up.
+
+- Comment that the Coulomb contribution is suppressed (neglectable) here due to the presence of $p_{\mr{T},\ell}$ cuts.
+
+\subsubsection*{Dependence on the choice of $p_{\mr{T},\ell}$ cuts}
+
+- Show the comparison for $p_{\mr{T},\ell} > 2, 4, 6 \GeV$.
+
+- Comment the problem of having a large $p_{\mr{T},\ell}$ cut if enough precision is reached.
+
+
+\subsubsection*{Spin-correlation effects (?)}
+
+\subsection{Impact of BSM contributions to $a_\tau$ in the cross section}
+
+- Show plot with different values of $a_\tau$. (Maybe use $a_\tau^\mr{SM} + a_\tau^\mr{BSM}$).
+
+\subsection{Impact of BSM contributions to $d_\tau$ in the cross section}
+
+- $d_\tau^\mr{SM} = 0$.
+
+- $\order{d_\tau^\mr{BSM}} \to 0$.
+
+- $\order{(d_\tau^\mr{BSM})^2}$ terms needed.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+
+
+\appendix
+\section*{Appendix}
+
+
+
+\newpage
+
+\bibliographystyle{utphys.bst}
+\bibliography{aa-tautau}
+
+
+\end{document}
+
+
+
