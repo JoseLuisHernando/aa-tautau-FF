@@ -27,6 +27,12 @@
 \usepackage{hhline}
 \usepackage[normalem]{ulem}
 
+% for the check and cross symbols
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+
 %\oddsidemargin 00pt \evensidemargin 00pt
 %\topmargin 00pt \headheight 00pt \headsep 00pt
 %%\footheight 12pt \footskip 30pt
@@ -51,7 +57,7 @@
 \newcommand{\SD}[1]{{ {\color{orange}{ [SD: #1]}} }}
 \newcommand{\MP}[1]{{ {\color{blue}{ [MP: #1]}} }}
 \newcommand{\JH}[1]{{ {\color{violet}{ [JH: #1]}} }}
-%\newcommand{\change}[1]{{{\color{red}{#1}}}}
+\newcommand{\change}[1]{{{\color{red}{#1}}}}
 \newcommand{\new}[1]{{{\color{olive}{#1}}}}
 
 \newcommand{\processmue}{\gamma\gamma \to \tau^+ \tau^- \to e^+ \mu^- \bar{\nu}_\tau \nu_\tau \bar{\nu}_{\mu} \nu_{e}}
@@ -119,13 +125,22 @@ Mathieu Pellen\footnote{E-mail:
 
 \section{Introduction}
 
+%- Should we include again the section about the equivalent-photon approximation(?)
 
+
+\newpage
 \section{Features of the calculation}
 \label{sec:features}
 
+\subsection{Equivalent-photon approximation}
+\label{sec:EPA}
+
+- Describe the EPA (as in the previous paper).
 
 \subsection{Form-factor approach}
 \label{sec:form_factor}
+
+%- Include this section in Features of the calculation and add section on EPA (?).
 
 - Keep this section for a general lepton and focus on the $\tau$-lepton in the numerics to emphasize that the same analysis can be done for $e$ and $\mu$ as a check of the method(?).
 
@@ -138,7 +153,134 @@ Mathieu Pellen\footnote{E-mail:
 
 - Give the general form-factor decomposition in the on-shell basis.
 
+\begin{comment}
+\begin{align} \label{eq:vertex_on-shell}
+  \Gamma_\mu^{\gamma\bar{f}f}(k,\bar{p},p) = 
+  e\bigg[&
+  \gamma_\mu \,g_{1}
+  + \gamma_\mu\gamma_5 \,g_{2}
+  + \frac{\ri\sigma_{\mu\nu}k^\nu}{2m} \,g_{3}
+  + \frac{\sigma_{\mu\nu}\gamma_5k^\nu}{2m} \,g_{4} 
+  + \frac{\ri k_\mu}{2m}  \,g_{5}
+  + \frac{k_\mu}{2m} \gamma_5 \,g_{6} 
+  \mhl \notag \\
+  &+ \big(\Lambda_+(\bar{p})\gamma_\mu + \gamma_\mu\Lambda_-(p)\big)\,g_{7} 
+  +  \big(\Lambda_+(\bar{p})\gamma_\mu - \gamma_\mu\Lambda_-(p)\big)\,g_{8} 
+  \mhl \notag \\
+  &+ \big(\Lambda_+(\bar{p})\gamma_\mu\gamma_5 + \gamma_\mu\gamma_5\Lambda_-(p)\big)\,g_{9} 
+  +  \big(\Lambda_+(\bar{p})\gamma_\mu\gamma_5 - \gamma_\mu\gamma_5\Lambda_-(p)\big)\,g_{10}
+  \mhl \notag \\
+  &+ \frac{\bar{k}_\mu}{2m}\big(\Lambda_+(\bar{p}) + \Lambda_-(p)\big)\,g_{11}
+  +  \frac{\bar{k}_\mu}{2m}\big(\Lambda_+(\bar{p}) - \Lambda_-(p)\big)\,g_{12} 
+  \mhl \notag \\
+  &+ \frac{\ri\bar{k}_\mu}{2m}\big(\Lambda_+(\bar{p})\gamma_5 + \gamma_5\Lambda_-(p)\big)\,g_{13} 
+  + \frac{\ri \bar{k}_\mu}{2m}\big(\Lambda_+(\bar{p})\gamma_5 - \gamma_5\Lambda_-(p)\big)\,g_{14} 
+  \mhl \notag \\
+  &+ \frac{\ri k_\mu}{2m}\big(\Lambda_+(\bar{p}) + \Lambda_-(p) \big)\,g_{15}
+  + \frac{\ri k_\mu}{2m}\big(\Lambda_+(\bar{p}) - \Lambda_-(p) \big)\,g_{16}
+  \mhl\notag \\
+  &+ \frac{k_\mu}{2m}\big(\Lambda_+(\bar{p})\gamma_5 + \gamma_5\Lambda_-(p)\big)\,g_{17}  
+  + \frac{k_\mu}{2m}\big(\Lambda_+(\bar{p})\gamma_5 - \gamma_5\Lambda_-(p)\big)\,g_{18}  
+  \mhl\notag \\
+  &+ \Lambda_+(\bar{p})\gamma_\mu\Lambda_-(p) \,g_{19}
+  + \Lambda_+(\bar{p})\gamma_\mu\gamma_5\Lambda_-(p) \,g_{20}
+  \mhl\notag \\
+  &+ \frac{\bar{k}_\mu}{2m}\Lambda_+(\bar{p})\Lambda_-(p) \,g_{21}
+  + \frac{\ri \bar{k}_\mu}{2m}\Lambda_+(\bar{p})\gamma_5\Lambda_-(p) \,g_{22}
+  \mhl\notag \\
+  &+ \frac{\ri k_\mu}{2m}\Lambda_+(\bar{p})\Lambda_-(p) \,g_{23}
+   + \frac{k_\mu}{2m}\Lambda_+(\bar{p})\gamma_5\Lambda_-(p) \,g_{24}\bigg]
+  \mhl,
+\end{align}
+
 - Give the transformation properties under space-time discrete symmetries of each term (no details). 
+
+Parity check: $g_1$, $g_3$, $g_5$, $g_7$, $g_8$, $g_{11}$, $g_{12}$, $g_{15}$, $g_{16}$,
+$g_{19}$, $g_{21}$, $g_{22}$.
+
+Parity cross: $g_2$, $g_4$, $g_6$, $g_9$, $g_{10}$, $g_{13}$, $g_{14}$, $g_{17}$, $g_{18}$,
+$g_{20}$, $g_{22}$, $g_{24}$.
+
+Charge conjugation check: $g_1$, $g_3$, $g_4$, $g_7$, $g_{10}$, $g_{11}$, $g_{13}$, $g_{16}$, $g_{18}$, $g_{19}$, $g_{21}$, $g_{22}$ 
+
+Charge conjugation cross: $g_2$, $g_5$, $g_6$, $g_8$, $g_9$, $g_{12}$, $g_{14}$, $g_{15}$, $g_{17}$, $g_{20}$, $g_{24}$
+
+
+Time reversal check:
+
+Time reversal cross: 
+
+\begin{table}[h!]
+\centering{
+\begin{tabular}{l|c|c|c|c|c}
+   \hl Space--time symmetry & \wn$\mc{P}$\wn & \wn$\mc{C}$\wn &\wn$\mc{T}$\wn & \;$\mc{CP}$\; & \,$\mc{CPT}$\, \\
+   \hline\hline
+   \hl $g_1,g_3,g_7,g_{9},g_{13},g_{15},g_{19},g_{21}$ & \cmark   & \cmark   & \cmark   & \cmark    & \cmark     \\      
+   \hl $g_2,g_8,g_{14},g_{20}$                   & \xmark   & \xmark   & \cmark   & \cmark    & \cmark     \\      
+   \hl $g_4,g_{10},g_{16},g_{22}$                & \xmark   & \cmark   & \xmark   & \xmark    & \cmark     \\      
+   \hl $g_5,g_{11},g_{17},g_{23}$                & \cmark   & \xmark   & \xmark   & \xmark    & \cmark     \\      
+   \hl $g_6,g_{12},g_{18},g_{24}$                & \xmark   & \xmark   & \cmark   & \cmark    & \cmark     \\      
+\end{tabular}
+}
+\caption{Summery of the preserved/violated space--time symmetries by the covariant structures associated with each form factor $g_i$.
+The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preserved or violated, respectively.}
+\end{table}
+\end{comment}
+
+\JH{Change the structures to $\Lambda_+(\bar{p}) \pm \Lambda_-(p)$ and adapt table.}
+
+\begin{align} \label{eq:vertex_on-shell}
+  \Gamma_\mu^{\gamma\bar{f}f}(k,\bar{p},p) = 
+  e\bigg[&
+  \gamma_\mu \,g_{1}
+  + \gamma_\mu\gamma_5 \,g_{2}
+  + \frac{\ri\sigma_{\mu\nu}k^\nu}{2m} \,g_{3}
+  + \frac{\sigma_{\mu\nu}\gamma_5k^\nu}{2m} \,g_{4} 
+  + \frac{\ri k_\mu}{2m}  \,g_{5}
+  + \frac{k_\mu}{2m} \gamma_5 \,g_{6} 
+  \notag \\
+  &+ \Lambda_+(\bar{p})\gamma_\mu \,g_{7} 
+  + \Lambda_+(\bar{p})\gamma_\mu\gamma_5 \,g_{8} 
+  + \frac{\bar{k}_\mu}{2m}\Lambda_+(\bar{p}) \,g_{9}
+  + \frac{\ri \bar{k}_\mu}{2m}\Lambda_+(\bar{p})\gamma_5 \,g_{10}
+  \notag \\
+  &+ \frac{\ri k_\mu}{2m}\Lambda_+(\bar{p}) \,g_{11} 
+  + \frac{k_\mu}{2m}\Lambda_+(\bar{p})\gamma_5 \,g_{12}  
+  \notag \\
+  &+ \gamma_\mu\Lambda_-(p) \,g_{13} 
+  + \gamma_\mu\gamma_5\Lambda_-(p) \,g_{14} 
+  + \frac{\bar{k}_\mu}{2m}\Lambda_-(p) \,g_{15}
+  + \frac{\ri \bar{k}_\mu}{2m}\gamma_5\Lambda_-(p) \,g_{16}
+  \notag \\
+  &+ \frac{\ri k_\mu}{2m}\Lambda_-(p) \,g_{17} 
+  + \frac{k_\mu}{2m}\gamma_5\Lambda_-(p) \,g_{18} 
+  \notag \\
+  &+ \Lambda_+(\bar{p})\gamma_\mu\Lambda_-(p) \,g_{19}
+  + \Lambda_+(\bar{p})\gamma_\mu\gamma_5\Lambda_-(p) \,g_{20}
+  \notag \\
+  &+ \frac{\bar{k}_\mu}{2m}\Lambda_+(\bar{p})\Lambda_-(p) \,g_{21}
+  + \frac{\ri \bar{k}_\mu}{2m}\Lambda_+(\bar{p})\gamma_5\Lambda_-(p) \,g_{22}
+  \notag \\
+  &+ \frac{\ri k_\mu}{2m}\Lambda_+(\bar{p})\Lambda_-(p) \,g_{23}
+   + \frac{k_\mu}{2m}\Lambda_+(\bar{p})\gamma_5\Lambda_-(p) \,g_{24}\bigg],
+\end{align}
+
+\begin{table}[h!]
+\centering{
+\begin{tabular}{l|c|c|c|c|c}
+   \hl Space--time symmetry & \wn$\mc{P}$\wn & \wn$\mc{C}$\wn &\wn$\mc{T}$\wn & \;$\mc{CP}$\; & \,$\mc{CPT}$\, \\
+   \hline\hline
+   \hl $g_1,g_3,g_7,g_{9},g_{13},g_{15},g_{19},g_{21}$ & \cmark   & \cmark   & \cmark   & \cmark    & \cmark     \\      
+   \hl $g_2,g_8,g_{14},g_{20}$                   & \xmark   & \xmark   & \cmark   & \cmark    & \cmark     \\      
+   \hl $g_4,g_{10},g_{16},g_{22}$                & \xmark   & \cmark   & \xmark   & \xmark    & \cmark     \\      
+   \hl $g_5,g_{11},g_{17},g_{23}$                & \cmark   & \xmark   & \xmark   & \xmark    & \cmark     \\      
+   \hl $g_6,g_{12},g_{18},g_{24}$                & \xmark   & \xmark   & \cmark   & \cmark    & \cmark     \\      
+\end{tabular}
+}
+\caption{Summery of the preserved/violated space--time symmetries by the covariant structures associated with each form factor $g_i$.
+The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preserved or violated, respectively.}
+\end{table}
+
 
 - Give the from-factor decomposition in the standard kinetical configuration and in ``ours''.
 
@@ -172,14 +314,24 @@ Mathieu Pellen\footnote{E-mail:
 \subsection{Technical aspects of the calculation and employed tools}
 \label{sec:tools}
 
-- Use of equivalent-photon approximation.
+- Comment the use of equivalent-photon approximation and \gammaUPC.
 
-- Use of iNWA to include spin correlations.
+- Comment the use of the ChFF to parameterize the photon flux.
 
-- Use of mixed input-parameter scheme.
+- Comment the use of iNWA to include spin correlations.
+
+- Comment the use of mixed input-parameter scheme.
 
 
-\subsubsection*{Checks on the calculation}
+
+\subsubsection*{Remarks about the NLO prediction (?)}
+
+- Reference to the previous paper for details on the NLO corrections.
+
+- Mention the gauge invariant splitting of the NLO corrections.
+
+
+\subsubsection*{Checks on the calculation (?)}
 \label{sec:checks}
 
 - Analytical expressions checked against FeynArts.
@@ -194,23 +346,72 @@ Mathieu Pellen\footnote{E-mail:
 
 - Numerical inputs
 
-\subsubsection*{Event selection}
+\subsubsection*{Event selection (?)}
 \label{sec:selection}
 
 - ATLAS set-up
 
+\clearpage
+\newpage
 \section{Results}
 \label{sec:results}
 
-\subsection{Comparison between the form-factor and the fixed-order calculation}
+%\JH{Increase labels in plots.}
 
-- Reference to the previous paper for details on the NLO prediction.
 
-- Show the relevance of the non included effects in the form-factor approach, \ie
+\subsection{Determination of $a_\tau$ in UPCs}
+\label{sec:a_tau_determination}
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/pt_lm_exp_vs_NLO.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/abs_eta_lm_exp_vs_NLO.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/acoplanarity_lmlp_FF_vs_NLO.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/cos_th_lmlp_FF_vs_NLO.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{Predictions for $\processmue$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$.
+    The panels (a) and (b) show predictions for the transverse momentum and the pseudorapidity of $\mu^-$, and
+    the panels (c) and (d) provide predictions for the acoplanarity and the angle between $\mu^-$ and $e^+$, respectively.
+    \change{The different curves show $\ldots$.}
+    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
+    \JH{Show plots like the upper panels or like the lower panels?.
+    I prefer the upper ones, but maybe for less $a_\tau$-values ($a_\tau = -0.057, -0.003, 0.001, 0.024$) and remove QED (prd).}
+    }
+    \label{fig:UPC_chff}
+\end{figure}
+
+- Show the comparison between $\sigma^\mr{NLO}$ vs $\sigma^{\mr{FF}}$ in the ATLAS set-up.
+
+- Remark the importance of including corrections to the $\tau$-decays in the form-factor calculation.
+Specially if $p_{\mr{T},\mu}$ is employed.  
+
+- Recall the importance of the photon-flux parametrization. 
+
+- Recall the importance of including spin correlations between the produced $\tau$-leptons. 
+
+\clearpage 
+\newpage
+
+%\subsection{Comparison between the form-factor and the fixed-order calculation}
+\subsection{Validity of the form-factor approach}
+\label{sec:FF_validity}
+
+- Show the relevance of the non-included effects in the form-factor approach, \ie
+%
 \begin{align}
   \Delta_\mr{FF}
-  = \frac{\sigma^{\mr{FF}} - \sigma^{\mr{QED}_\mr{P}}}{\sigma^{\mr{QED}_\mr{P}}}
+  = \frac{\sigma^{\mr{FF}} - \sigma^{\mr{QED}}_\mr{P}}{\sigma^{\mr{QED}}_\mr{P}}
 \end{align}
+
+- Show $\frac{t-m^2}{s}$ (?) at LO (?) at NLO (?).
+
 
 \subsubsection{Inclusive $\tau$-pair production}
 \label{sec:aa_to_tautau}
@@ -219,19 +420,120 @@ Mathieu Pellen\footnote{E-mail:
 
 - Show it just for unpolarized $\tau$-leptons.
 
-- Mention that $a_\tau$ is part of QED corrections, which are gauge invariant independently and, thus, they can be compared.
+- Remark that $a_\tau$ is part of QED corrections, which are gauge invariant independently and, thus, they can be compared.
 
 
 \subsubsection*{Fixed photon--photon centre-of-mass energy}
 
-- Show comparison for fixed c.m.e. ($3.8, 5(?), 10, 18 \GeV$? or all?)
+- Show comparison for fixed c.m.e. ($3.8, 5, 10, 18 \GeV$? or all?)
 
 - Remark importance of the Coulomb term for small c.m.e..
 
 - Remark the importance of using observables that are not sensitive to collinear radiation off the produced $\tau$-leptons.
 
+\begin{table}
+  \centering{
+  \begin{tabular}{c||c|c||c|c|c||c}
+  \hl $\sqrt{s_{\gamma\gamma}}\,[\mr{GeV}]$ & $\sigma^\LO\,[\mr{nb}]$  & $\delta^{\mr{QED}}\,[\%]$  & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_\mr{FF} \, [\%]$ \\
+  \hline \hline
+  \hl $3.8$                                 & $7.9548(1)$              & $2.6853(4)$                & $0.3901(1)$             & $2.4757(1)$                 & $2.8658(1)$              & \wm$0.1804(4)$ \\   
+  \hline
+  \hl $5$                                   & $14.065(1)$              & $0.7933(1)$                & $0.3009(1)$             & $0.4158(1)$                 & $0.7167(1)$              & $-0.0765(1)$   \\   
+  \hline
+  \hl $10$                                  & $7.1323(1)$              & $0.3857(1)$                & $0.2876(1)$             & $0.0196(1)$                 & $0.3072(1)$              & $-0.0785(1)$   \\   
+  \hline
+  \hl $18$                                  & $3.0310(1)$              & $0.6996(2)$                & $0.2842(1)$             & $0.0018(1)$                 & $0.2856(1)$              & $-0.4136(2)$
+  \end{tabular}
+  }
+  \caption{
+  Inclusive cross-section for $\gamma\gamma\to\tau^+\tau^-$ for different fixed photon--photon centre-of-mass energies, which are indicated in the first column. 
+  The second column gives the LO cross section.
+  The third column provides the QED relative correction.
+  The fourth and fifth columns correspond to the relative corrections from the anomalous magnetic moment and from the Coulomb term, respectively.
+  The sixth column gives the total relative correction in the form-factor approach.
+  Finally, the last column correspond to the difference between the NLO QED relative correction and the form-factor relative correction.
+  }
+  \label{tbl:prd_cme}
+\end{table}
 
+
+\clearpage
+\newpage
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_3.8/pt_Lm.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_5/pt_Lm.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_10/pt_Lm.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_18/pt_Lm.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{Predictions for $\gamma\gamma\to\tau^+\tau^-$ for different photon--photon centre-of-mass energies:
+    (a) $\sqrt{s_{\gamma\gamma}} = 3.8\,\GeV$, 
+    (b) $\sqrt{s_{\gamma\gamma}} = 5\,\GeV$,
+    (c) $\sqrt{s_{\gamma\gamma}} = 10\,\GeV$, 
+    and (d) $\sqrt{s_{\gamma\gamma}} = 18\,\GeV$.
+    The different curves show the transverse momentum of the $\tau^-$-lepton at LO (black) and including NLO QED correction (red),
+    the contribution from the anomalous magnetic moment (green),
+    the contribution from the Coulomb term (blue),
+    and the total correction obtained in form-factor approach (brown).
+    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
+    \JH{Remove (unpol.) in title and add subscript $\gamma\gamma$.}
+    }
+    \label{fig:PRD_cme_pT_Lm}
+\end{figure}
+%
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_3.8/eta_Lm.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_5/eta_Lm.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_10/eta_Lm.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_cme_18/eta_Lm.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{Same as Fig.~\ref{fig:PRD_cme_pT_Lm}, but for the pseudorapidity of the $\tau^-$-lepton.\\
+    \JH{Change to $|\eta_\tau|$ and more bins.} \\
+    \JH{Remove (unpol.) in title and add subscript $\gamma\gamma$.}
+    }
+    \label{fig:PRD_cme_eta_Lm}
+\end{figure}
+
+
+
+\clearpage
+\newpage
 \subsubsection*{Ultraperipheral heavy-ion collision}
+
+\begin{table}
+  \centering{
+  \begin{tabular}{c|c||c|c|c||c}
+  \hl $\sigma^\LO\,[\mr{mb}]$  & $\delta^{\mr{QED}}\,[\%]$  & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_\mr{FF} \, [\%]$ \\
+  \hline \hline
+  $1.0617(1)$              & $0.945(1)$                 & $0.308(1)$              & $0.589(1)$                  & $0.898(1)$               & $-0.047(1)$      
+  \end{tabular}
+  }
+  \caption{
+  Inclusive cross-section for $\gamma\gamma\to\tau^+\tau^-$ induced by UPCs of two lead ions with $\sqrt{s_{\text{PbPb}}}=5.02 \TeV$. 
+  The first column gives the LO cross section.
+  The second column provides the QED relative correction.
+  The third and fourth columns correspond to the relative corrections from the anomalous magnetic moment and from the Coulomb term, respectively.
+  The fifth column gives the total relative correction in the form-factor approach.
+  Finally, the last column correspond to the difference between the NLO QED relative correction and the form-factor relative correction.
+  }
+  \label{tbl:prd_chff}
+\end{table}
 
 - Show comparison with photon flux.
 
@@ -241,18 +543,80 @@ Mathieu Pellen\footnote{E-mail:
 
  * They do not include the Coulomb term $\to$ Wrong value for $a_\tau$ obtained. 
 
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_chff_5.02e3/pt_Lm.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/PRD_FF_vs_FO_tau_chff_5.02e3/eta_Lm.pdf}}
+    \newline
+    (a) \hspace{7.15cm} (b) \hspace{-1.4cm}
+    }
+    \caption{Inclusive cross-section for $\gamma\gamma\to\tau^+\tau^-$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$. 
+    The panels (a) and (b) show the prediction for the transverse momentum and the pseudorapidity of the $\tau^-$-lepton, respectively.
+    The different curves show prediction at LO (black) and including NLO QED correction (red),
+    the contribution from the anomalous magnetic moment (green),
+    the contribution from the Coulomb term (blue),
+    and the total correction obtained in form-factor approach (brown).
+    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$.\\
+    \JH{Change (b) to $|\eta_\tau|$ and more bins.} \\
+    \JH{Remove title.}
+    }
+    \label{fig:PRD_chff}
+\end{figure}
 
-\subsubsection{$\tau$-pair production with leptonic $\tau$-decays}
+
+\newpage
+
+\subsubsection{$\tau$-pair production in UPCs assuming leptonic $\tau$-decays}
 
 - Comparison including leptonic $\tau$-decays.
 
 - Show the comparison between $\sigma^\mr{QED}_\mr{P}$ vs $\sigma^{\mr{FF}}$.
 
-- Show the comparison between $\sigma^\mr{NLO}$ vs $\sigma^{\mr{FF}} + \Delta\sigma^\NLO_\mr{D} + \Delta\sigma^\NLO_{\overline{\mr{D}}}$.
+- Remark that the corrections to the production are gauge invariant by their own and, thus, can be compared to determine $\Delta_\mr{FF}$.
 
-- Remark the importance of including the corrections to the decays in the form-factor calculation (or of extracting these corrections to the fixed-order calculation).
-Specially if $p_{\mr{T},\mu}$ is employed in the analysis.  
 
+\begin{table}
+  \centering{
+  \begin{tabular}{c||c|c||c|c|c||c}
+  \hl cuts                                             
+  & $\sigma^\LO\,[\mr{nb}]$
+  & $\delta^{\mr{QED}}\,[\%]$   & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_{\mr{FF}}[\%]$ \\
+  \hline \hline
+  \Hl Inclusive   
+  & $\mwn32920(3)$
+  & $0.9440(7)$               & $0.3084(1)$             & $0.5893(1)$                 & $0.8976(1)$              & $-0.046(1)$    \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $\mwn45.877(7)$ 
+  & $0.3792(8)$               & $0.3483(1)$             & $0.0017(1)$                 & $0.3500(1)$              & $-0.029(1)$    \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>2\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $438.22(6)\mwn$  
+  & $0.3021(5)$               & $0.3310(1)$             & $0.0180(1)$                 & $0.3490(1)$              & $\mwm0.047(1)$ \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>6\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $\mwn10.137(2)$ 
+  & $0.456(2)\mwn$            & $0.3531(1)$             & $0.0004(1)$                 & $0.3535(1)$              & $-0.102(1)$ \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<3.5 \mwm\mwm\end{matrix}$   
+  & $\mwn49.911(8)$ 
+  & $0.3845(8)$               & $0.3445(1)$             & $0.0017(1)$                 & $0.3463(1)$              & $-0.038(1)$    \\
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<2 \mwm\mwm\mwm\end{matrix}$ 
+  & $\mwn39.237(6)$
+  & $0.371(1)\mwn$            & $0.3532(1)$             & $0.0017(1)$                 & $0.3549(1)$              & $-0.016(1)$
+  \end{tabular}
+  }
+  \caption{
+  Cross section for  $\gamma\gamma\to\tau^+\tau^-\to e^+\mu^-\bar{\nu}_\tau\nu_\tau\bar{\nu}_\mu\nu_e$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$ for different cut configurations. \\
+  \JH{Change.}
+  }
+  \label{tbl:upc_chff}
+\end{table}
+
+
+\begin{comment}
 \subsubsection*{Fixed photon--photon centre-of-mass energy (?)}
 
 - Show inclusive predictions for fixed c.m.e.
@@ -260,28 +624,78 @@ Specially if $p_{\mr{T},\mu}$ is employed in the analysis.
 - Remark again the dominance of the Coulomb term in the NLO correction for small c.m.e. 
 
 - Show that the sensitivity of $p_{\mr{T},\mu}$ to collinear radiation off the produced $\tau$-leptons is not determinant and, thus, it is a good observable.
+\end{comment}
+
+\clearpage
+\newpage
+
+%\subsubsection*{ATLAS set-up}
+
+%- Show the comparison for the ATLAS set-up.
+
+%- Comment that the Coulomb contribution is suppressed (neglectable) here due to the presence of $p_{\mr{T},\ell}$ cuts.
 
 
-\subsubsection*{ATLAS set-up}
 
-- Show the comparison for the ATLAS set-up.
-
-- Comment that the Coulomb contribution is suppressed (neglectable) here due to the presence of $p_{\mr{T},\ell}$ cuts.
 
 \subsubsection*{Dependence on the choice of $p_{\mr{T},\ell}$ cuts}
 
-- Show the comparison for $p_{\mr{T},\ell} > 2, 4, 6 \GeV$.
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/pt_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/abs_eta_lm_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/cos_th_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{Predictions for $\processmue$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$.
+    The panels (a) and (b) show predictions for the transverse momentum and the pseudorapidity of $\mu^-$, and
+    the panels (c) and (d) provide predictions for the acoplanarity and the angle between $\mu^-$ and $e^+$, respectively.
+    The different curves show the transverse momentum of the $\tau^-$-lepton at LO (black) and including NLO QED correction (red),
+    the contribution from the anomalous magnetic moment (green),
+    the contribution from the Coulomb term (blue),
+    and the total correction obtained in form-factor approach (brown).
+    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
+    \JH{Remove title.}
+    }
+    \label{fig:UPC_chff}
+\end{figure}
+
+- Show the comparison for $p_{\mr{T},\ell} > 2, 4, 6 \GeV$ and $|\eta_\ell| < 2.5$.
+
+- Add $p_{\mr{T},\ell} > 0 \GeV$ and $|\eta_\ell| < 2.5$ (?).
 
 - Comment the problem of having a large $p_{\mr{T},\ell}$ cut if enough precision is reached.
 
+- For the plots: Do a figure for each observable and different cuts (inclusive apart) or do a figure for each cut configuration (?). 
+
+%\subsubsection*{Comparison between the form-factor approach and the full NLO prediction}
+
+%- Show $\sigma^\mr{FF}$ vs. $\sigma^\NLO$ including corrections to the decays.
+
+%- Remark the importance of including the corrections to the decays in the form-factor calculation (or of extracting these corrections to the fixed-order calculation).
+%Specially if $p_{\mr{T},\mu}$ is employed in the analysis.  
 
 \subsubsection*{Spin-correlation effects (?)}
 
-\subsection{Impact of BSM contributions to $a_\tau$ in the cross section}
+- I would say no, it is repetitive with the paper. 
+I would just mention it in Sec.~\ref{sec:a_tau_determination}.
 
-- Show plot with different values of $a_\tau$. (Maybe use $a_\tau^\mr{SM} + a_\tau^\mr{BSM}$).
 
-\subsection{Impact of BSM contributions to $d_\tau$ in the cross section}
+
+
+
+%\subsection{Impact of BSM contributions to $a_\tau$ in the cross section}
+
+%- Show plot with different values of $a_\tau$. (Maybe use $a_\tau^\mr{SM} + a_\tau^\mr{BSM}$).
+
+\subsection{Impact of a non-zero electric dipole moment in the cross section (?)}
 
 - $d_\tau^\mr{SM} = 0$.
 
