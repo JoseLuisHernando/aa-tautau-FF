@@ -1,17 +1,16 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Features of the calculation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Equivalent-photon approximation}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Process of interest}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Form-factor approach}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Form-factor decomposition of the \040vertex function}{subsection.2.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Extracting the contribution from a}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.1}{General form-factor decomposition of the f vertex function}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Relation to the anomalous magnetic moment of leptons}{subsection.2.2}% 6
 \BOOKMARK [3][-]{subsubsection.2.2.3}{Coulomb term and Sommerfeld enhancement}{subsection.2.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.2.4}{Analytical expressions for the helicity amplitudes \(?\)}{subsection.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.3}{Technical aspects of the calculation and employed tools}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.4}{Set-up of the calculation}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Results}{}% 11
-\BOOKMARK [2][-]{subsection.3.1}{Determination of a in UPCs}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.2}{Validity of the form-factor approach}{section.3}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Inclusive -pair production}{subsection.3.2}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.2}{-pair production in UPCs assuming leptonic -decays}{subsection.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Impact of a non-zero electric dipole moment in the cross section \(?\)}{section.3}% 16
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 17
+\BOOKMARK [2][-]{subsection.2.3}{Aspects of the calculation and employed tools}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Set-up of the calculation}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Results}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Determination of a in ultraperipheral collisions}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Discussion of the form-factor approach}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Inclusive -pair production}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.2}{-pair production in ultraperipheral collisions assuming leptonic -decays}{subsection.3.2}% 14
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 15
+\BOOKMARK [1][-]{appendix.A}{Analytical expressions for the helicity amplitudes}{}% 16

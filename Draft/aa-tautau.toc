@@ -1,17 +1,16 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Features of the calculation}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Equivalent-photon approximation}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Form-factor approach}{2}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Form-factor decomposition of the $\bf {\gamma }\bf {\bar {\tau }}\bf {\tau }$ vertex function}{2}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Extracting the contribution from $a_\tau $}{2}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Coulomb term and Sommerfeld enhancement}{3}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Analytical expressions for the helicity amplitudes (?)}{3}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Technical aspects of the calculation and employed tools}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Set-up of the calculation}{3}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Results}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Determination of $a_\tau $ in UPCs}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Validity of the form-factor approach}{5}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Inclusive $\tau $-pair production}{5}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}$\tau $-pair production in UPCs assuming leptonic $\tau $-decays}{9}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Impact of a non-zero electric dipole moment in the cross section (?)}{11}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Conclusion}{11}{section.4}%
+\contentsline {subsection}{\numberline {2.1}Process of interest}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Form-factor approach}{3}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}General form-factor decomposition of the $\gamma \bar {f}f$ vertex function}{3}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Relation to the anomalous magnetic moment of leptons}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Coulomb term and Sommerfeld enhancement}{4}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Aspects of the calculation and employed tools}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Set-up of the calculation}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Results}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Determination of $a_\tau $ in ultraperipheral collisions}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Discussion of the form-factor approach}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Inclusive $\tau $-pair production}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}$\tau $-pair production in ultraperipheral collisions assuming leptonic $\tau $-decays}{12}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}Conclusion}{19}{section.4}%
+\contentsline {section}{\numberline {A}Analytical expressions for the helicity amplitudes}{20}{appendix.A}%

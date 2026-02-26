@@ -92,7 +92,7 @@
 %\textbf{Subtleties in the determination of the anomalous magnetic moment and the electric dipole moment of leptons via ultraperipheral heavy-ion collisions at the LHC.}
 \textbf{Imprint of the anomalous magnetic moment 
 %and the electric dipole moment 
-of the $\tau$-lepton in the $\tau^+\tau^-$ production via ultraperipheral heavy-ion collisions at the LHC.}
+of the $\tau$-lepton in the $\tau^+\tau^-$ production via ultraperipheral heavy-ion collisions at the LHC}
 }
 
 \date{}
@@ -132,10 +132,19 @@ Mathieu Pellen\footnote{E-mail:
 \section{Features of the calculation}
 \label{sec:features}
 
-\subsection{Equivalent-photon approximation}
-\label{sec:EPA}
+\subsection{Process of interest}
+\label{sec:process}
 
-- Describe the EPA (as in the previous paper).
+- Describe the process, \ie $\processmue$ induce by the UPCs of two lead ions. 
+
+- Introduce the EPA (as in the previous paper) as theoretical framework for UPCs.
+
+- Use the EPA to introduce the notation for $\sigma$ and $\hat{\sigma}$.
+
+- Reference the previous paper for more details.
+
+\clearpage
+\newpage
 
 \subsection{Form-factor approach}
 \label{sec:form_factor}
@@ -144,7 +153,8 @@ Mathieu Pellen\footnote{E-mail:
 
 - Keep this section for a general lepton and focus on the $\tau$-lepton in the numerics to emphasize that the same analysis can be done for $e$ and $\mu$ as a check of the method(?).
 
-\subsubsection{Form-factor decomposition of the $\bf{\gamma}\bf{\bar{\tau}}\bf{\tau}$ vertex function}
+
+\subsubsection{General form-factor decomposition of the $\gamma\bar{f}f$ vertex function}
 \label{sec:vertex}
 
 - Mention the problem of the off-shell $\tau$ in the standard approach.
@@ -265,7 +275,7 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
    + \frac{k_\mu}{2m}\Lambda_+(\bar{p})\gamma_5\Lambda_-(p) \,g_{24}\bigg],
 \end{align}
 
-\begin{table}[h!]
+\begin{table}
 \centering{
 \begin{tabular}{l|c|c|c|c|c}
    \hl Space--time symmetry & \wn$\mc{P}$\wn & \wn$\mc{C}$\wn &\wn$\mc{T}$\wn & \;$\mc{CP}$\; & \,$\mc{CPT}$\, \\
@@ -282,12 +292,12 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 \end{table}
 
 
-- Give the from-factor decomposition in the standard kinetical configuration and in ``ours''.
+- Give the from-factor decomposition in the standard on-shell configuration and in ``ours''.
 
 - Remark that the decomposition is gauge dependent (Ward identities).
 
-\subsubsection{Extracting the contribution from $a_\tau$}
-\label{sec:a_tau_term}
+\subsubsection{Relation to the anomalous magnetic moment of leptons}
+\label{sec:a_l_term}
 
 - Write matrix element with the general vertex decomposition.
 
@@ -299,6 +309,14 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 
 - Perform Taylor expansion of the form factors around $\frac{x}{s} \sim \frac{m^2}{s}$ ($x=t,u$) to extract $a_\tau$ and $d_\tau$ contributions.
 
+%\subsection{Impact of a non-zero electric dipole moment in the cross section (?)}
+
+- Add small discussion about the possible determination of $d_\tau$ with this set-up.
+$d_\ell^\mr{SM} = 0$.
+$\order{d_\ell^\mr{BSM}} \to 0$.
+$\order{(d_\ell^\mr{BSM})^2}$ terms are needed.
+
+
 \subsubsection{Coulomb term and Sommerfeld enhancement}
 \label{sec:Coulomb_term}
 
@@ -306,13 +324,13 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 
 - Give the contribution from Coulomb term.
 
-\subsubsection{Analytical expressions for the helicity amplitudes (?)}
-\label{sec:analytics}
+\clearpage
+\newpage
 
-- Give analytical expression in the spinor-helicity formalism for $\M^{(0)}$, $\M^{a_\tau}$, $\M^{d_\tau}$.
-
-\subsection{Technical aspects of the calculation and employed tools}
+\subsection{Aspects of the calculation and employed tools}
 \label{sec:tools}
+
+\subsubsection*{Possible title here?}
 
 - Comment the use of equivalent-photon approximation and \gammaUPC.
 
@@ -323,20 +341,28 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 - Comment the use of mixed input-parameter scheme.
 
 
-
-\subsubsection*{Remarks about the NLO prediction (?)}
+\subsubsection*{Remarks about the NLO prediction}
 
 - Reference to the previous paper for details on the NLO corrections.
 
+- Mention that the NLO correction refers to factorizable corrections as we are working in the iNWA. 
+
 - Mention the gauge invariant splitting of the NLO corrections.
 
+- Mention that all final-state leptons are dressed.
 
-\subsubsection*{Checks on the calculation (?)}
+
+\subsubsection*{Checks on the calculation}
 \label{sec:checks}
 
 - Analytical expressions checked against FeynArts.
 
 - Correct behaviour under $\mc{P}$, $\mc{C}$ and $\mc{CP}$ of $\M^{(0)}$, $\M^{a_\tau}$, $\M^{d_\tau}$  (?).
+
+- Refer to the previous paper for the other performed checks.
+
+\clearpage
+\newpage
 
 \subsection{Set-up of the calculation}
 \label{sec:setup}
@@ -346,10 +372,14 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 
 - Numerical inputs
 
-\subsubsection*{Event selection (?)}
+\subsubsection*{Event selection}
 \label{sec:selection}
 
 - ATLAS set-up
+
+
+
+
 
 \clearpage
 \newpage
@@ -359,7 +389,7 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 %\JH{Increase labels in plots.}
 
 
-\subsection{Determination of $a_\tau$ in UPCs}
+\subsection{Determination of $a_\tau$ in ultraperipheral collisions}
 \label{sec:a_tau_determination}
 
 \begin{figure}
@@ -370,9 +400,9 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
     \newline
     (a) \hspace{7.3cm} (b) \hspace{-5cm}
     \newline   
-    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/acoplanarity_lmlp_FF_vs_NLO.pdf}}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/acoplanarity_lmlp_exp_vs_NLO.pdf}}
     \hspace{-0.3cm}
-    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/cos_th_lmlp_FF_vs_NLO.pdf}}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/cos_th_lmlp_exp_vs_NLO.pdf}}
     \newline
     (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
     }
@@ -381,8 +411,6 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
     the panels (c) and (d) provide predictions for the acoplanarity and the angle between $\mu^-$ and $e^+$, respectively.
     \change{The different curves show $\ldots$.}
     The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
-    \JH{Show plots like the upper panels or like the lower panels?.
-    I prefer the upper ones, but maybe for less $a_\tau$-values ($a_\tau = -0.057, -0.003, 0.001, 0.024$) and remove QED (prd).}
     }
     \label{fig:UPC_chff}
 \end{figure}
@@ -392,7 +420,11 @@ The symbols \cmark\, and \xmark\, indicate if the space--time symmetry is preser
 - Remark the importance of including corrections to the $\tau$-decays in the form-factor calculation.
 Specially if $p_{\mr{T},\mu}$ is employed.  
 
-- Recall the importance of the photon-flux parametrization. 
+- Recall the dependence in the photon-flux parametrization.
+
+%- The ChFF and the EDFF parametrizations tend to overestimate and underestimate the data, respectively. 
+%As a consequence, the $a_\tau$ needed to fit the data is lower and higher, respectively.
+%Either normalized observables are needed or drastic improvement in the photon-flux parametrization.
 
 - Recall the importance of including spin correlations between the produced $\tau$-leptons. 
 
@@ -400,7 +432,7 @@ Specially if $p_{\mr{T},\mu}$ is employed.
 \newpage
 
 %\subsection{Comparison between the form-factor and the fixed-order calculation}
-\subsection{Validity of the form-factor approach}
+\subsection{Discussion of the form-factor approach}
 \label{sec:FF_validity}
 
 - Show the relevance of the non-included effects in the form-factor approach, \ie
@@ -410,7 +442,7 @@ Specially if $p_{\mr{T},\mu}$ is employed.
   = \frac{\sigma^{\mr{FF}} - \sigma^{\mr{QED}}_\mr{P}}{\sigma^{\mr{QED}}_\mr{P}}
 \end{align}
 
-- Show $\frac{t-m^2}{s}$ (?) at LO (?) at NLO (?).
+%- Show $\frac{t-m^2}{s}$ (?) at LO (?) at NLO (?).
 
 
 \subsubsection{Inclusive $\tau$-pair production}
@@ -434,15 +466,15 @@ Specially if $p_{\mr{T},\mu}$ is employed.
 \begin{table}
   \centering{
   \begin{tabular}{c||c|c||c|c|c||c}
-  \hl $\sqrt{s_{\gamma\gamma}}\,[\mr{GeV}]$ & $\sigma^\LO\,[\mr{nb}]$  & $\delta^{\mr{QED}}\,[\%]$  & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_\mr{FF} \, [\%]$ \\
+  \hl $\sqrt{s_{\gamma\gamma}}\,[\mr{GeV}]$ & $\hat{\sigma}^\LO\,[\mr{nb}]$ & $\delta^{\mr{QED}}\,[\%]$ & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_\mr{FF} \, [\%]$ \\
   \hline \hline
-  \hl $3.8$                                 & $7.9548(1)$              & $2.6853(4)$                & $0.3901(1)$             & $2.4757(1)$                 & $2.8658(1)$              & \wm$0.1804(4)$ \\   
+  \hl $3.8$                                 & $7.9548(1)$                   & $2.6853(4)$               & $0.3901(1)$             & $2.4757(1)$                 & $2.8658(1)$              & \wm$0.1804(4)$ \\   
   \hline
-  \hl $5$                                   & $14.065(1)$              & $0.7933(1)$                & $0.3009(1)$             & $0.4158(1)$                 & $0.7167(1)$              & $-0.0765(1)$   \\   
+  \hl $5$                                   & $14.065(1)$                   & $0.7933(1)$               & $0.3009(1)$             & $0.4158(1)$                 & $0.7167(1)$              & $-0.0765(1)$   \\   
   \hline
-  \hl $10$                                  & $7.1323(1)$              & $0.3857(1)$                & $0.2876(1)$             & $0.0196(1)$                 & $0.3072(1)$              & $-0.0785(1)$   \\   
+  \hl $10$                                  & $7.1323(1)$                   & $0.3857(1)$               & $0.2876(1)$             & $0.0196(1)$                 & $0.3072(1)$              & $-0.0785(1)$   \\   
   \hline
-  \hl $18$                                  & $3.0310(1)$              & $0.6996(2)$                & $0.2842(1)$             & $0.0018(1)$                 & $0.2856(1)$              & $-0.4136(2)$
+  \hl $18$                                  & $3.0310(1)$                   & $0.6996(2)$               & $0.2842(1)$             & $0.0018(1)$                 & $0.2856(1)$              & $-0.4136(2)$
   \end{tabular}
   }
   \caption{
@@ -484,7 +516,7 @@ Specially if $p_{\mr{T},\mu}$ is employed.
     the contribution from the Coulomb term (blue),
     and the total correction obtained in form-factor approach (brown).
     The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
-    \JH{Remove (unpol.) in title and add subscript $\gamma\gamma$.}
+    \JH{Fix binning for $\sqrt{s_{\gamma\gamma}} = 10 \GeV$.}
     }
     \label{fig:PRD_cme_pT_Lm}
 \end{figure}
@@ -505,7 +537,6 @@ Specially if $p_{\mr{T},\mu}$ is employed.
     }
     \caption{Same as Fig.~\ref{fig:PRD_cme_pT_Lm}, but for the pseudorapidity of the $\tau^-$-lepton.\\
     \JH{Change to $|\eta_\tau|$ and more bins.} \\
-    \JH{Remove (unpol.) in title and add subscript $\gamma\gamma$.}
     }
     \label{fig:PRD_cme_eta_Lm}
 \end{figure}
@@ -559,61 +590,45 @@ Specially if $p_{\mr{T},\mu}$ is employed.
     and the total correction obtained in form-factor approach (brown).
     The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$.\\
     \JH{Change (b) to $|\eta_\tau|$ and more bins.} \\
-    \JH{Remove title.}
     }
     \label{fig:PRD_chff}
 \end{figure}
 
 
+\clearpage
 \newpage
 
-\subsubsection{$\tau$-pair production in UPCs assuming leptonic $\tau$-decays}
+\subsubsection{$\tau$-pair production in ultraperipheral collisions assuming leptonic $\tau$-decays}
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/pt_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/abs_eta_lm_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/cos_th_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{Predictions for $\processmue$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$.
+    The panels (a) and (b) show predictions for the transverse momentum and the pseudorapidity of $\mu^-$, and
+    the panels (c) and (d) provide predictions for the acoplanarity and the angle between $\mu^-$ and $e^+$, respectively.
+    \change{The different curves show $\ldots$.}
+    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
+    \JH{Adapt $p_\mr{T}$ and $A_{\mu e}$ bins.}
+    }
+    \label{fig:UPC_chff_cts_FF_vs_QED}
+\end{figure}
 
 - Comparison including leptonic $\tau$-decays.
 
 - Show the comparison between $\sigma^\mr{QED}_\mr{P}$ vs $\sigma^{\mr{FF}}$.
 
 - Remark that the corrections to the production are gauge invariant by their own and, thus, can be compared to determine $\Delta_\mr{FF}$.
-
-
-\begin{table}
-  \centering{
-  \begin{tabular}{c||c|c||c|c|c||c}
-  \hl cuts                                             
-  & $\sigma^\LO\,[\mr{nb}]$
-  & $\delta^{\mr{QED}}\,[\%]$   & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_{\mr{FF}}[\%]$ \\
-  \hline \hline
-  \Hl Inclusive   
-  & $\mwn32920(3)$
-  & $0.9440(7)$               & $0.3084(1)$             & $0.5893(1)$                 & $0.8976(1)$              & $-0.046(1)$    \\   
-  \hline
-  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
-  & $\mwn45.877(7)$ 
-  & $0.3792(8)$               & $0.3483(1)$             & $0.0017(1)$                 & $0.3500(1)$              & $-0.029(1)$    \\   
-  \hline
-  \hl $\begin{matrix}p_{\mr{T},\ell}>2\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
-  & $438.22(6)\mwn$  
-  & $0.3021(5)$               & $0.3310(1)$             & $0.0180(1)$                 & $0.3490(1)$              & $\mwm0.047(1)$ \\   
-  \hline
-  \hl $\begin{matrix}p_{\mr{T},\ell}>6\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
-  & $\mwn10.137(2)$ 
-  & $0.456(2)\mwn$            & $0.3531(1)$             & $0.0004(1)$                 & $0.3535(1)$              & $-0.102(1)$ \\   
-  \hline
-  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<3.5 \mwm\mwm\end{matrix}$   
-  & $\mwn49.911(8)$ 
-  & $0.3845(8)$               & $0.3445(1)$             & $0.0017(1)$                 & $0.3463(1)$              & $-0.038(1)$    \\
-  \hline
-  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<2 \mwm\mwm\mwm\end{matrix}$ 
-  & $\mwn39.237(6)$
-  & $0.371(1)\mwn$            & $0.3532(1)$             & $0.0017(1)$                 & $0.3549(1)$              & $-0.016(1)$
-  \end{tabular}
-  }
-  \caption{
-  Cross section for  $\gamma\gamma\to\tau^+\tau^-\to e^+\mu^-\bar{\nu}_\tau\nu_\tau\bar{\nu}_\mu\nu_e$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$ for different cut configurations. \\
-  \JH{Change.}
-  }
-  \label{tbl:upc_chff}
-\end{table}
 
 
 \begin{comment}
@@ -640,6 +655,42 @@ Specially if $p_{\mr{T},\mu}$ is employed.
 
 \subsubsection*{Dependence on the choice of $p_{\mr{T},\ell}$ cuts}
 
+
+\begin{table}
+  \centering{
+  \begin{tabular}{c||c|c||c|c|c||c}
+  \hl cuts                                             
+  & $\sigma^\LO\,[\mr{nb}]$
+  & $\delta^{\mr{QED}}\,[\%]$   & $\delta^{a_\tau}\,[\%]$ & $\delta^{\mr{Coul.}}\,[\%]$ & $\delta^{\mr{FF}}\,[\%]$ & $\Delta_{\mr{FF}}[\%]$ \\
+  \hline \hline
+  \Hl Inclusive   
+  & $\mwn32920(3)$
+  & $0.9440(7)$               & $0.3084(1)$             & $0.5893(1)$                 & $0.8976(1)$              & $-0.046(1)$    \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>0\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $-$ 
+  & $-$               & $-$             & $-$                 & $-$              & $-$    \\
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>2\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $438.22(6)\mwn$  
+  & $0.3021(5)$               & $0.3310(1)$             & $0.0180(1)$                 & $0.3490(1)$              & $\mwm0.047(1)$ \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>4\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $\mwn45.877(7)$ 
+  & $0.3792(8)$               & $0.3483(1)$             & $0.0017(1)$                 & $0.3500(1)$              & $-0.029(1)$    \\   
+  \hline
+  \hl $\begin{matrix}p_{\mr{T},\ell}>6\,\mr{GeV}\\ |\eta_\ell|<2.5 \mwm\mwm\end{matrix}$   
+  & $\mwn10.137(2)$ 
+  & $0.456(2)\mwn$            & $0.3531(1)$             & $0.0004(1)$                 & $0.3535(1)$              & $-0.102(1)$ \\   
+  \end{tabular}
+  }
+  \caption{
+  Cross section for  $\gamma\gamma\to\tau^+\tau^-\to e^+\mu^-\bar{\nu}_\tau\nu_\tau\bar{\nu}_\mu\nu_e$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$ for different cut configurations.
+  }
+  \label{tbl:upc_chff}
+\end{table}
+
+
 \begin{figure}
     \centering{
     \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/pt_lm_FF_vs_QED.pdf}}
@@ -654,17 +705,126 @@ Specially if $p_{\mr{T},\mu}$ is employed.
     \newline
     (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
     }
-    \caption{Predictions for $\processmue$ induced by UPCs of two lead ions with $\sqrt{s_{\mr{PbPb}}}=5.02 \TeV$.
-    The panels (a) and (b) show predictions for the transverse momentum and the pseudorapidity of $\mu^-$, and
-    the panels (c) and (d) provide predictions for the acoplanarity and the angle between $\mu^-$ and $e^+$, respectively.
-    The different curves show the transverse momentum of the $\tau^-$-lepton at LO (black) and including NLO QED correction (red),
-    the contribution from the anomalous magnetic moment (green),
-    the contribution from the Coulomb term (blue),
-    and the total correction obtained in form-factor approach (brown).
-    The lower panel gives the relative correction $\delta^i = \frac{\Delta\sigma^i}{\sigma^\LO}$. \\
-    \JH{Remove title.}
+    \caption{    
+    \JH{Option 1: for each cut configuration (here is inclusive)}\\
+    (a) $p_{\mr{T},\ell}$ \\
+    (b) $|\eta_\ell|$,\\
+    (c) $A_{\mu e}$,\\
+    (d) $\cos \theta_{\mu e}$,\\
+    \JH{Remove titles.}\\
+    \JH{Adapt $p_\mr{T}$ and $A_{\mu e}$ bins.}
     }
-    \label{fig:UPC_chff}
+    \label{fig:UPC_chff_FF_vs_QED}
+\end{figure}
+
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/pt_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_1/pt_lm_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/pt_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_2/pt_lm_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{    
+    \JH{Option 2: for each observable}\\
+    (a) Inclusive, \\
+    (b) $p_{\mr{T},\ell} > 2\GeV$ and $|\eta_\ell| < 2.5$,\\
+    (c) $p_{\mr{T},\ell} > 4\GeV$ and $|\eta_\ell| < 2.5$,
+    \JH{change to $|\eta_\ell| < 2.5$}\\
+    (d) $p_{\mr{T},\ell} > 6\GeV$ and $|\eta_\ell| < 2.5$,\\
+    \JH{Remove titles.}\\
+    \JH{Adapt $p_\mr{T}$ bins.}
+    }
+    \label{fig:UPC_chff_FF_vs_QED}
+\end{figure}
+
+
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/abs_eta_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_1/abs_eta_lm_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/abs_eta_lm_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_2/abs_eta_lm_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{    
+    \JH{Option 2: for each observable}\\
+    (a) Inclusive, \\
+    (b) $p_{\mr{T},\ell} > 2\GeV$ and $|\eta_\ell| < 2.5$,\\
+    (c) $p_{\mr{T},\ell} > 4\GeV$ and $|\eta_\ell| < 2.5$,
+    \JH{change to $|\eta_\ell| < 2.5$}\\
+    (d) $p_{\mr{T},\ell} > 6\GeV$ and $|\eta_\ell| < 2.5$,\\
+    \JH{Remove titles.}
+    }
+    \label{fig:UPC_chff_FF_vs_QED}
+\end{figure}
+
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_1/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_2/acoplanarity_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{    
+    \JH{Option 2: for each observable}\\
+    (a) Inclusive, \\
+    (b) $p_{\mr{T},\ell} > 2\GeV$ and $|\eta_\ell| < 2.5$,\\
+    (c) $p_{\mr{T},\ell} > 4\GeV$ and $|\eta_\ell| < 2.5$,
+    \JH{change to $|\eta_\ell| < 2.5$}\\
+    (d) $p_{\mr{T},\ell} > 6\GeV$ and $|\eta_\ell| < 2.5$,\\
+    \JH{Remove titles.}\\
+    \JH{Adapt $A_{\mu e}$ bins.}
+    }
+    \label{fig:UPC_chff_FF_vs_QED}
+\end{figure}
+
+
+\begin{figure}
+    \centering{
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3/cos_th_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_1/cos_th_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (a) \hspace{7.3cm} (b) \hspace{-5cm}
+    \newline   
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts/cos_th_lmlp_FF_vs_QED.pdf}}
+    \hspace{-0.3cm}
+    \raisebox{0pt}{\includegraphics[width=0.5\columnwidth]{./Plots/UPC_FF_vs_FO_chff_5.02e3_cts_2/cos_th_lmlp_FF_vs_QED.pdf}}
+    \newline
+    (c) \hspace{7.15cm} (d) \hspace{-1.4cm}
+    }
+    \caption{    
+    \JH{Option 2: for each observable}\\
+    (a) Inclusive, \\
+    (b) $p_{\mr{T},\ell} > 2\GeV$ and $|\eta_\ell| < 2.5$,\\
+    (c) $p_{\mr{T},\ell} > 4\GeV$ and $|\eta_\ell| < 2.5$,
+    \JH{change to $|\eta_\ell| < 2.5$}\\
+    (d) $p_{\mr{T},\ell} > 6\GeV$ and $|\eta_\ell| < 2.5$.
+    }
+    \label{fig:UPC_chff_cos_th_lmlp_cts}
 \end{figure}
 
 - Show the comparison for $p_{\mr{T},\ell} > 2, 4, 6 \GeV$ and $|\eta_\ell| < 2.5$.
@@ -682,36 +842,28 @@ Specially if $p_{\mr{T},\mu}$ is employed.
 %- Remark the importance of including the corrections to the decays in the form-factor calculation (or of extracting these corrections to the fixed-order calculation).
 %Specially if $p_{\mr{T},\mu}$ is employed in the analysis.  
 
-\subsubsection*{Spin-correlation effects (?)}
-
-- I would say no, it is repetitive with the paper. 
-I would just mention it in Sec.~\ref{sec:a_tau_determination}.
 
 
+\clearpage 
+\newpage
 
 
-
-%\subsection{Impact of BSM contributions to $a_\tau$ in the cross section}
-
-%- Show plot with different values of $a_\tau$. (Maybe use $a_\tau^\mr{SM} + a_\tau^\mr{BSM}$).
-
-\subsection{Impact of a non-zero electric dipole moment in the cross section (?)}
-
-- $d_\tau^\mr{SM} = 0$.
-
-- $\order{d_\tau^\mr{BSM}} \to 0$.
-
-- $\order{(d_\tau^\mr{BSM})^2}$ terms needed.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
 
 
+\clearpage
+\newpage
+
 \appendix
 \section*{Appendix}
 
+\section{Analytical expressions for the helicity amplitudes}
+\label{sec:analytics}
 
+- Give analytical expression in the spinor-helicity formalism for $\M^{(0)}$, $\M^{a_\tau}$, $\M^{d_\tau}$.
 
 \newpage
 
